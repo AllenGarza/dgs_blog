@@ -1,4 +1,6 @@
 from django.conf.urls import url, include
+from django.conf import settings
+from django.conf.urls.static import static
 """mysite URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -20,4 +22,4 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
