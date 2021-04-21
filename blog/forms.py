@@ -6,5 +6,4 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        field = '__all__'
-        exclude = ()
+        fields = ('title', 'text',)
