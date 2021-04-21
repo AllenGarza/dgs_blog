@@ -19,5 +19,13 @@
             <h2><a href="">My second post</a></h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. . .</p>
         </article>
+
+        {% for post in posts %}
+        <article>
+            <time>published: {{post.published_date}}</time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post }}</p>
+        </article>
+        {% endfor %}
     </body>
 </html>
